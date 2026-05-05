@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRL — coming soon</title>
+  <meta name="description" content="irlapp.org — website coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f7f7f8;
+      --ink: #121218;
+      --muted: #6b6b76;
+      --accent: #1a8f5c;
+      --hairline: rgba(18, 18, 24, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(24px, 6vw, 48px);
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    main {
+      max-width: 28rem;
+    }
+
+    .mark {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(3rem, 10vw, 4.25rem);
+      font-weight: 400;
+      line-height: 1.05;
+      margin: 0 0 0.35em;
+      letter-spacing: -0.03em;
+    }
+
+    .domain {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      margin-bottom: clamp(28px, 6vh, 40px);
+    }
+
+    .domain::before {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--hairline);
+      margin: 0 auto 14px;
+    }
+
+    .soon {
+      font-size: clamp(1.05rem, 3vw, 1.125rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 8px;
+      vertical-align: 2px;
+      opacity: 0.85;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 18px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="domain">irlapp.org</p>
+    <h1 class="mark">IRL</h1>
+    <p class="soon"><span class="dot" aria-hidden="true"></span>Website coming soon.</p>
+  </main>
+</body>
+</html>
