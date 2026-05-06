@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IRL — coming soon</title>
-  <meta name="description" content="irlapp.org — website coming soon." />
+  <title>IRL — hi from the real world</title>
+  <meta name="description" content="IRL is a low-key way to connect at the same café or spot—both people opt in first, then you say hi in person. No feed, no chat." />
+  <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --paper: #f7f7f8;
-      --ink: #121218;
-      --muted: #6b6b76;
+      --paper: #faf9f7;
+      --paper-dark: #f0eeeb;
+      --ink: #14141a;
+      --muted: #5c5c66;
       --accent: #1a8f5c;
-      --hairline: rgba(18, 18, 24, 0.08);
+      --hairline: rgba(20, 20, 26, 0.09);
+      --shadow: 0 24px 60px rgba(20, 20, 26, 0.06);
     }
 
     * { box-sizing: border-box; }
@@ -22,65 +26,95 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, sans-serif;
-      background: var(--paper);
+      background: radial-gradient(120% 80% at 50% 0%, var(--paper) 0%, var(--paper-dark) 100%);
       color: var(--ink);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: clamp(24px, 6vw, 48px);
+      padding: clamp(28px, 7vw, 56px) clamp(20px, 5vw, 40px) 80px;
       text-align: center;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
     }
 
     main {
-      max-width: 28rem;
+      max-width: 26rem;
+      width: 100%;
+      padding: clamp(32px, 7vw, 44px) clamp(28px, 6vw, 36px);
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--hairline);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo-wrap {
+      margin: 0 auto 1.25rem;
+    }
+
+    .logo {
+      width: clamp(88px, 22vw, 112px);
+      height: clamp(88px, 22vw, 112px);
+      border-radius: 24px;
+      box-shadow:
+        0 4px 16px rgba(20, 20, 26, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      display: block;
+    }
+
+    .domain {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin: 0 0 0.85rem;
     }
 
     .mark {
       font-family: "DM Serif Display", Georgia, serif;
-      font-size: clamp(3rem, 10vw, 4.25rem);
+      font-size: clamp(2.5rem, 9vw, 3.75rem);
       font-weight: 400;
-      line-height: 1.05;
-      margin: 0 0 0.35em;
-      letter-spacing: -0.03em;
+      line-height: 1.06;
+      margin: 0 0 1.25rem;
+      letter-spacing: -0.035em;
     }
 
-    .domain {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      margin-bottom: clamp(28px, 6vh, 40px);
-    }
-
-    .domain::before {
-      content: "";
-      display: block;
-      width: 36px;
-      height: 1px;
-      background: var(--hairline);
-      margin: 0 auto 14px;
-    }
-
-    .soon {
-      font-size: clamp(1.05rem, 3vw, 1.125rem);
-      font-weight: 400;
+    .lede {
+      font-size: 1rem;
+      font-weight: 450;
+      line-height: 1.62;
       color: var(--ink);
-      line-height: 1.55;
       margin: 0;
+      text-wrap: balance;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: clamp(1.75rem, 5vw, 2.25rem);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hairline);
     }
 
     .dot {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--accent);
-      margin-right: 8px;
-      vertical-align: 2px;
-      opacity: 0.85;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+
+    .status {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0;
+      letter-spacing: -0.01em;
     }
 
     footer {
@@ -88,18 +122,29 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 18px;
-      font-size: 0.75rem;
+      padding: 22px;
+      font-size: 0.72rem;
       color: var(--muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
 <body>
   <main>
+    <div class="logo-wrap">
+      <img class="logo" src="logo.png" alt="IRL" width="112" height="112" decoding="async" />
+    </div>
     <p class="domain">irlapp.org</p>
     <h1 class="mark">IRL</h1>
-    <p class="soon"><span class="dot" aria-hidden="true"></span>Website coming soon.</p>
+    <p class="lede">
+      A chill way to meet people already at your spot—nothing happens till you both opt in (think secret-handshake energy, not cold-approach stress).
+      No endless feed, no texting stage: just a small nudge toward saying hi in person.
+    </p>
+    <div class="status-row">
+      <span class="dot" aria-hidden="true"></span>
+      <p class="status">App coming soon</p>
+    </div>
   </main>
+  <footer>© IRL</footer>
 </body>
 </html>
