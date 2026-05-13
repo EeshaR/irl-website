@@ -3,148 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IRL — hi from the real world</title>
-  <meta name="description" content="IRL is a low-key way to connect at the same café or spot—both people opt in first, then you say hi in person. No feed, no chat." />
-  <link rel="icon" type="image/png" sizes="512x512" href="logo.png" />
+  <title>IRL — meet people at the place you&apos;re actually in</title>
+  <meta name="description" content="IRL is mutual-consent, in-venue discovery. You only see someone after you both opt in at the same spot—then you say hi in person. No endless feed and no chat in the app." />
+  <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --paper: #faf9f7;
-      --paper-dark: #f0eeeb;
-      --ink: #14141a;
-      --muted: #5c5c66;
-      --accent: #1a8f5c;
-      --hairline: rgba(20, 20, 26, 0.09);
-      --shadow: 0 24px 60px rgba(20, 20, 26, 0.06);
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
-      background: radial-gradient(120% 80% at 50% 0%, var(--paper) 0%, var(--paper-dark) 100%);
-      color: var(--ink);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(28px, 7vw, 56px) clamp(20px, 5vw, 40px) 80px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    main {
-      max-width: 26rem;
-      width: 100%;
-      padding: clamp(32px, 7vw, 44px) clamp(28px, 6vw, 36px);
-      background: rgba(255, 255, 255, 0.55);
-      border: 1px solid var(--hairline);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .logo-wrap {
-      margin: 0 auto 1.25rem;
-    }
-
-    .logo {
-      width: clamp(88px, 22vw, 112px);
-      height: clamp(88px, 22vw, 112px);
-      border-radius: 24px;
-      box-shadow:
-        0 4px 16px rgba(20, 20, 26, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
-      display: block;
-    }
-
-    .domain {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      margin: 0 0 0.85rem;
-    }
-
-    .mark {
-      font-family: "DM Serif Display", Georgia, serif;
-      font-size: clamp(2.5rem, 9vw, 3.75rem);
-      font-weight: 400;
-      line-height: 1.06;
-      margin: 0 0 1.25rem;
-      letter-spacing: -0.035em;
-    }
-
-    .lede {
-      font-size: 1rem;
-      font-weight: 450;
-      line-height: 1.62;
-      color: var(--ink);
-      margin: 0;
-      text-wrap: balance;
-    }
-
-    .status-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: clamp(1.75rem, 5vw, 2.25rem);
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--hairline);
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-      opacity: 0.9;
-    }
-
-    .status {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--ink);
-      margin: 0;
-      letter-spacing: -0.01em;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 22px;
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand-link" href="./" aria-current="page">
+      <img src="logo.png" alt="" width="40" height="40" decoding="async" />
+      <span class="brand-name">IRL</span>
+    </a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="about/">About</a>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="support/">Support</a>
+      <a href="guidelines/">Guidelines</a>
+      <a href="safety/">Safety</a>
+      <a href="delete-account/">Delete account</a>
+    </nav>
+  </header>
+
   <main>
-    <div class="logo-wrap">
-      <img class="logo" src="logo.png" alt="IRL" width="112" height="112" decoding="async" />
+    <div class="hero">
+      <img class="logo-big" src="logo.png" alt="IRL app logo" width="128" height="128" decoding="async" />
+      <p class="eyebrow">irlapp.org</p>
+      <h1>IRL</h1>
+      <p class="lede">
+        Meet people who are physically at the same venue as you—café, bar, coworking space, or event—with a mutual &ldquo;yes&rdquo; before anyone&apos;s identity is shared. Built for calm, consent-based introductions, not endless scrolling or in-app messaging.
+      </p>
     </div>
-    <p class="domain">irlapp.org</p>
-    <h1 class="mark">IRL</h1>
-    <p class="lede">
-      A chill way to meet people already at your spot—nothing happens till you both opt in (think secret-handshake energy, not cold-approach stress).
-      No endless feed, no texting stage: just a small nudge toward saying hi in person.
-    </p>
-    <div class="status-row">
-      <span class="dot" aria-hidden="true"></span>
-      <p class="status">App coming soon</p>
-    </div>
+
+    <article class="card prose">
+      <h2 style="margin-top:0">How it works</h2>
+      <p>
+        IRL focuses on one place at a time. When you are inside a supported venue, you can turn on discoverability. Other people there can do the same. Until both of you mutually opt in toward each other, profiles stay anonymous: you see vibe-style signals, not names or photos. There is intentionally <strong>no chat</strong> in the product—communication is oriented toward coordinating briefly in structured ways and saying hello in real life.
+      </p>
+      <p>
+        Location is used to confirm you are at a venue (and typically within a short distance consistent with still being at that spot), to support safety features like auto-ending discoverability when you leave, and to keep discovery scoped to the place you share—not across a city or a feed of strangers.
+      </p>
+      <p>
+        We take verification, reporting, blocking, and account deletion seriously. For any question about the service, moderation, privacy, or your data—contact us at one address: <a href="mailto:admin@irlapp.org">admin@irlapp.org</a>.
+      </p>
+
+      <div class="status-pill" role="status">App coming soon</div>
+
+      <div class="contact-block" style="margin-top: 2rem">
+        <p><strong>Contact</strong></p>
+        <p>Support, safety reports, privacy questions, partnerships: <a href="mailto:admin@irlapp.org">admin@irlapp.org</a></p>
+      </div>
+    </article>
   </main>
-  <footer>© IRL</footer>
+
+  <footer class="footer-site">
+    <nav aria-label="Footer">
+      <a href="about/">About</a>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="support/">Support</a>
+      <a href="guidelines/">Guidelines</a>
+      <a href="safety/">Safety</a>
+      <a href="delete-account/">Delete account</a>
+    </nav>
+    <p>&copy; IRL. All rights reserved.</p>
+  </footer>
 </body>
 </html>
