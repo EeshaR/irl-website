@@ -78,15 +78,15 @@ a:hover {
   letter-spacing: -0.03em;
 }
 
+/* App Store / Xcode: App Icon set → ios-marketing 1024×1024 PNG (shown with iOS-shaped rounding on web). */
 .brand-link img {
   width: 40px;
   height: 40px;
-  border-radius: 11px;
-  object-fit: contain;
-  background: rgba(255, 255, 255, 0.65);
+  border-radius: 22.37%;
+  object-fit: cover;
   box-shadow:
-    0 2px 10px rgba(29, 27, 24, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    0 2px 10px rgba(29, 27, 24, 0.12),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
 }
 
 .brand-name {
@@ -131,14 +131,12 @@ main {
   width: clamp(96px, 24vw, 128px);
   height: clamp(96px, 24vw, 128px);
   margin: 0 auto 1.25rem;
-  border-radius: 28px;
+  border-radius: 22.37%;
   display: block;
-  object-fit: contain;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.72);
+  object-fit: cover;
   box-shadow:
-    0 8px 28px rgba(29, 27, 24, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    0 8px 28px rgba(29, 27, 24, 0.12),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
 }
 
 .eyebrow {
