@@ -43,6 +43,17 @@
       Privacy requests: <a href="mailto:admin@irlapp.org">admin@irlapp.org</a>.
     </p>
 
+    <aside class="plain-summary" aria-label="Short summary of this Privacy Policy">
+      <p class="plain-summary-title">At a glance (plain English)</p>
+      <p class="plain-summary-lede">If you skim one block, skim this—everything below spells it out formally.</p>
+      <ul>
+        <li><strong>What we collect:</strong> signup credentials; profile fields and photos you choose; camera captures for ID/age verification and optional profile shots; photo-library access only when you pick an image; <strong>device location while you are actively using the app</strong> so venue-based discovery can work; in-app interaction data; local notifications if you allow them; and routine technical data (IPs, timestamps, device/app version, auth tokens, crash strings you send)—not separate ad-tracking SDKs today.</li>
+        <li><strong>Why:</strong> to run mutual-consent, venue-bound discovery inside the United States; verify eligibility; enforce community rules through reporting and moderation; operate and secure the Service.</li>
+        <li><strong>What we don&apos;t do with it:</strong> we don&apos;t sell personal information to data brokers; we don&apos;t use government-ID imagery for advertising or unrelated profiling; location isn&apos;t for background surveillance outside active product use (<a href="#location-essential">see Location</a>).</li>
+        <li><strong>Your rights (U.S.):</strong> control discoverability and iOS permissions; request access or deletion via <a href="../delete-account/">Delete account</a> or email <a href="mailto:admin@irlapp.org">admin@irlapp.org</a>; California and other state consumers get statutory timelines once we verify you.</li>
+      </ul>
+    </aside>
+
     <h2>1. Categories of information we collect</h2>
     <p>We strive to collect only what we need for the product. In practice today that aligns with:</p>
 
@@ -53,7 +64,10 @@
 
     <h3>Camera (identity verification &amp; photos)</h3>
     <p>
-      Consistent with the permission text in the app, we use the camera to scan a driver&apos;s-license barcode, capture materials needed to verify identity and eligibility, capture your profile photo where you choose to take one with the camera, and related onboarding steps. Identity checks help deter fake accounts—they do not eliminate all offline risk (<a href="../terms/">Terms</a>).
+      Consistent with the permission text in the app, we use the camera solely for <strong>age and identity verification</strong>, optional profile imagery you initiate, and related onboarding—e.g., scanning a driver&apos;s-license barcode or capturing verification imagery your flow requests. Verification data helps confirm you meet eligibility before discoverability (<a href="../terms/">Terms</a>).
+    </p>
+    <p>
+      <strong>Verification captures are not used for advertising,</strong> are not repurposed into unrelated behavioral profiles for third-party marketing, and are accessed under technical and policy constraints. We retain them only as long as needed for fraud prevention, dispute handling, audits, or legal obligations—typically on the order of <strong>months, not indefinitely</strong>—unless a longer period is legally required or an active investigation reasonably needs them. Stored verification materials follow access controls communicated during onboarding updates.
     </p>
 
     <h3>Photo library</h3>
@@ -61,10 +75,12 @@
       If you opt in, we access your photo library only so you can <strong>choose</strong> a profile picture (or related images)—not more than ordinary system pickers accomplish.
     </p>
 
-    <h3>Location</h3>
+    <h3 id="location-essential">Location</h3>
     <p>
-      With your permission we collect device location roughly when you&apos;re actively using IRL (<strong>&ldquo;while using the app,&rdquo;</strong> aligning with Apple&apos;s in-app disclosure) so we can tell whether you&apos;re near or at a venue, show relevant people discovery for that venue, and send coarse coordinates to our servers as described in-app. Without location permission, core venue discovery will not function. Turning off discovery or exiting the flows we describe reduces what we derive from GPS in proportion to actual app behavior.
-
+      <strong>Location is essential to core Service functionality,</strong> not an optional enhancement: without it, venue-based discovery generally cannot operate. With your permission, we collect device location when you&apos;re actively using IRL (<strong>&ldquo;while using the app,&rdquo;</strong> per Apple disclosure) so we can determine proximity to venues you interact with and power same-venue discovery flows described in-product.
+    </p>
+    <p>
+      <strong>Location data is used strictly to enable venue-based functionality and is not used for background tracking or continuous surveillance outside active use.</strong> We send the coordinates—or venue-correlated pings—needed for those features over encrypted connections to operate matching and safety safeguards (such as aligning discoverability with presence rules). Turning off discovery, leaving venues, denying permission, or closing the app stops routine collection proportionally to ordinary client behavior—not continuous location monitoring unrelated to Service features.
     </p>
 
     <h3>Notifications (on your phone)</h3>
@@ -90,7 +106,7 @@
 
     <h2>3. How we use information</h2>
     <ul>
-      <li>Operate signup, authenticate sessions, verify age and identity through ID tooling so only eligible accounts can unlock discoverability.</li>
+      <li>Operate signup, authenticate sessions, verify age and identity through ID tooling <strong>(never resold for unrelated advertising profiling)</strong> so eligible accounts unlock discoverability.</li>
       <li>Offer venue-bound discovery—you choose whether to appear discoverable, and anonymity rules before mutual consent are as shown in-app.</li>
       <li>Honor in-product controls including blocks or reports submitted through the flows we ship.</li>
       <li>Derive concise profile summaries or prompts that appear on cards from information you volunteered, consistent with screens inside the app.</li>
@@ -112,8 +128,17 @@
 
     <h2>6. Retention &amp; security</h2>
     <p>
-      We keep information only while needed to operate the Service, satisfy legal preservation duties, investigate abuse, fix bugs, deliver accounts, or comply with subpoenas tied to incidents. Identity artifacts may persist under separate onboarding retention guidance. Technical safeguards lessen breach risk—they cannot erase all internet insecurity—protect passcodes/device biometrics proactively.
-
+      Retention anchors on necessity and law—not infinite archives for its own sake. Illustrative horizons (approximate—specific matters like legal holds may extend them):
+    </p>
+    <ul>
+      <li><strong>Active accounts:</strong> profile and operational data retained while your account stays open and briefly thereafter to unwind payments, disputes, or abuse investigations if any.</li>
+      <li><strong>Deletion requests:</strong> after we verify and complete a deletion, we aim to remove or de-identify personal content in production systems <strong>within about thirty (30) days</strong>; some references can persist transiently until routine jobs finish.</li>
+      <li><strong>Encrypted rolling backups:</strong> deleted rows may linger in snapshots our cloud vendor rotates until overwrite—ordinarily <strong>up to roughly ninety (90) days</strong> in ordinary operations before aged backups expire, after which restores become impractical absent extraordinary archive copies.</li>
+      <li><strong>Verification / safety records:</strong> ID-related artifacts and investigative logs may remain longer when statute, litigation, credential fraud, or law-enforcement timelines require—even so, horizons remain oriented around necessity with compartmentalized access.</li>
+      <li><strong>Aggregate or de-identified analytics:</strong> may endure without identifying you where re-linking is intentionally impractical.</li>
+    </ul>
+    <p>
+      Technical safeguards lessen breach risk; they cannot erase all internet insecurity—protect device passcodes and biometrics proactively.
     </p>
 
     <h2>7. Your choices, deletion, &amp; U.S. state requests</h2>
