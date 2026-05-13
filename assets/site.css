@@ -134,7 +134,7 @@ main {
   border-radius: 28px;
   display: block;
   object-fit: contain;
-  padding: 8px;
+  padding: 4px;
   background: rgba(255, 255, 255, 0.72);
   box-shadow:
     0 8px 28px rgba(29, 27, 24, 0.1),
