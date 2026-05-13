@@ -40,7 +40,7 @@ body {
     radial-gradient(90% 70% at -10% 20%, var(--mint-soft), transparent 50%),
     linear-gradient(180deg, var(--paper-warm) 0%, var(--paper) 40%);
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.012em;
+  letter-spacing: normal;
 }
 
 a {
@@ -75,7 +75,7 @@ a:hover {
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: normal;
 }
 
 /* App Store / Xcode: App Icon set → ios-marketing 1024×1024 PNG (shown with iOS-shaped rounding on web). */
@@ -90,9 +90,10 @@ a:hover {
 }
 
 .brand-name {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 
 .nav-links {
@@ -100,9 +101,10 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.35rem 0.85rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
+  gap: 0.4rem 1rem;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
 }
 
 .nav-links a {
@@ -151,31 +153,47 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  font-family: "Source Serif 4", Georgia, serif;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 7vw, 3.25rem);
-  margin: 0 0 1rem;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.22;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin: 2.25rem 0 0.75rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.32;
 }
 
 h3 {
-  font-size: 1.125rem;
-  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  line-height: 1.38;
+}
+
+h1 {
+  font-size: clamp(2.375rem, 7vw, 3.375rem);
+  margin: 0 0 1.15rem;
+}
+
+h2 {
+  font-size: 1.5625rem;
+  margin: 2.65rem 0 0.9rem;
+}
+
+h3 {
+  font-size: 1.1875rem;
+  margin: 1.75rem 0 0.62rem;
 }
 
 .lede {
   font-size: 1.0625rem;
   color: var(--ink);
   margin: 0 0 1.25rem;
+  line-height: 1.72;
   text-wrap: balance;
 }
 
@@ -199,9 +217,7 @@ h3 {
   margin-top: 1.5rem;
   padding: 0.5rem 0.9rem;
   font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--ink);
-  background: var(--accent-soft);
+  font-weight: 600;
   border-radius: 999px;
 }
 
@@ -256,18 +272,22 @@ h3 {
 }
 
 /* Legal / long-form pages */
-.page-title {
+h1.page-title {
+  font-size: clamp(2.125rem, 4.8vw, 2.75rem);
+  line-height: 1.24;
   margin-bottom: 0.35rem;
 }
 
 .last-updated {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--muted);
-  margin: 0 0 1.75rem;
+  line-height: 1.55;
+  margin: 0 0 1.85rem;
 }
 
 .prose p {
   margin: 0 0 1rem;
+  line-height: 1.68;
 }
 
 .prose ul,
@@ -277,7 +297,12 @@ h3 {
 }
 
 .prose li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.52rem;
+  line-height: 1.62;
+}
+
+.prose h2:first-of-type {
+  margin-top: 1.75rem;
 }
 
 .prose strong {
